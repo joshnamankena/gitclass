@@ -1,0 +1,30 @@
+import java.util.*;
+import java.lang.*;
+class Amstrong_number
+{
+public static void main(String args[])
+{
+Scanner sc=new Scanner(System.in);
+int n=sc.nextInt();
+int Am=0,copy=n,copied=n,count=0;
+while(n!=0)
+{
+int rem=n%10;
+count+=1;;
+n/=10;
+}
+System.out.println(count);
+while(copy!=0)
+{
+int r=copy%10;
+Am+=(int)Math.pow(r,count);
+copy/=10;
+}
+System.out.println(Am);
+if(copied==Am)
+System.out.println("Amstrong number");
+else
+System.out.println("Not Amstrong number");
+}
+}
+
